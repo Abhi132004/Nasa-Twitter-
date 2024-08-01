@@ -21,6 +21,23 @@ My goal for this project was to learn and try airflow, understand how dags work,
 ### Architecture Diagram 
 ![Data Architecture](Twitter-Airflow-ETL-Data-Architecture.png)
 
+## Services Used
+
+The following services are integral to our project and collectively support our data processing, storage, analysis, and reporting needs in an efficient and scalable manner:
+
+1. **Apache Airflow**  
+   Apache Airflow is an open-source platform designed to programmatically author, schedule, and monitor workflows. It is particularly well-suited for orchestrating complex data workflows, automating tasks, and managing dependencies between different tasks or processes.
+
+2. **Twitter API**  
+   The Twitter API is a developer interface for accessing and interacting with Twitter's data and services. It enables tasks like posting tweets, following users, and retrieving tweets programmatically. Developers use it to build Twitter-related applications and perform data analysis.
+
+3. **Amazon EC2**  
+   Amazon Elastic Compute Cloud (Amazon EC2) is a web service offered by Amazon Web Services (AWS) that provides resizable compute capacity in the cloud. It allows users to launch and manage virtual servers, known as EC2 instances, to run applications and workloads.
+
+4. **Amazon S3 (Simple Storage Service)**  
+   Amazon S3 is an object storage service known for its manufacturing scalability, data availability, security, and performance. It is used for storing and retrieving any amount of data at any time, from anywhere on the web.
+
+
 ### Challenges
 Similar to others, I encountered several challenges throughout the project. Below, I've outlined these challenges to provide foresight and preparation for future endeavors.
 
