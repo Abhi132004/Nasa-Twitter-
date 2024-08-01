@@ -37,6 +37,48 @@ The following services are integral to our project and collectively support our 
 4. **Amazon S3 (Simple Storage Service)**  
    Amazon S3 is an object storage service known for its manufacturing scalability, data availability, security, and performance. It is used for storing and retrieving any amount of data at any time, from anywhere on the web.
 
+## Project Execution Flow
+
+### Data Extraction and Transformation
+
+1. **Data Extraction from Twitter API**  
+   The project begins with the extraction of data from the Twitter API using a custom ETL script. This script retrieves data based on specific queries or criteria.
+
+2. **Data Transformation**  
+   The extracted data, typically in JSON format, is transformed into a structured DataFrame (DF) format. This transformation includes cleaning, filtering, and organizing the data for further processing.
+
+3. **Local Data Storage**  
+   The transformed data is temporarily stored locally, serving as an intermediate repository.
+
+### AWS EC2 and Airflow Deployment
+
+1. **Creating an EC2 Instance**  
+   An Amazon EC2 instance is launched on AWS. This instance provides a scalable and cloud-based environment for executing data processing tasks.
+
+2. **IAM Role Configuration**  
+   An IAM (Identity and Access Management) role is created and associated with the EC2 instance. This role grants the necessary permissions to access AWS resources, particularly for writing data to an Amazon S3 bucket.
+
+3. **Security Group Setup**  
+   The security group associated with the EC2 instance is configured to enable access, including SSH access, and establish necessary network settings.
+
+4. **SSH Connection**  
+   You connect to the EC2 instance using SSH, gaining remote access to the instance.
+
+5. **Airflow Installation**  
+   Apache Airflow, a workflow orchestration tool, is installed on the EC2 instance. Airflow is essential for defining, scheduling, and executing ETL workflows.
+
+6. **DAG Creation**  
+   A Directed Acyclic Graph (DAG) is created in Apache Airflow to represent the ETL workflow. The DAG defines the sequence of tasks, including data transformation and loading.
+
+7. **Running the ETL Workflow**  
+   The Apache Airflow scheduler is started, which triggers the ETL workflow, executing data transformation and loading tasks.
+
+### Data Storage in Amazon S3
+
+1. **Storing Transformed Data in Amazon S3**  
+   The final step of the ETL pipeline involves storing the processed data in an Amazon S3 bucket. Amazon S3 provides secure, durable, and scalable object storage for the data.
+
+
 
 ### Challenges
 Similar to others, I encountered several challenges throughout the project. Below, I've outlined these challenges to provide foresight and preparation for future endeavors.
