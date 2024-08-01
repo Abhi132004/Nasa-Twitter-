@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6e21e4bc-73f3-4651-b368-043199c49024)# twitter-airflow-data-engineering-project
+# twitter-airflow-data-engineering-project
 This repo consists of all the code that pulls data from twitter, schedules script on airflow via EC2 and pushes data to s3 bucket. The code written, specifically pulls `nasa` tweets, creates a dataframe and finally pushes the csv to s3 bucket via airflow scheduling.
 My goal for this project was to learn and try airflow, understand how dags work, utilize AWS services.
 
