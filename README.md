@@ -1,4 +1,4 @@
-# twitter-airflow-data-engineering-project
+![image](https://github.com/user-attachments/assets/6e21e4bc-73f3-4651-b368-043199c49024)# twitter-airflow-data-engineering-project
 This repo consists of all the code that pulls data from twitter, schedules script on airflow via EC2 and pushes data to s3 bucket. The code written, specifically pulls `nasa` tweets, creates a dataframe and finally pushes the csv to s3 bucket via airflow scheduling.
 My goal for this project was to learn and try airflow, understand how dags work, utilize AWS services.
 
@@ -77,6 +77,9 @@ The following services are integral to our project and collectively support our 
 
 1. **Storing Transformed Data in Amazon S3**  
    The final step of the ETL pipeline involves storing the processed data in an Amazon S3 bucket. Amazon S3 provides secure, durable, and scalable object storage for the data.
+
+###Output Image
+![image](https://github.com/user-attachments/assets/997e8fe9-a87c-4e8f-8fdb-1acf1a625005)
 
 
 
